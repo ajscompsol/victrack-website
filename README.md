@@ -28,14 +28,17 @@ Search `index.html` for `TODO`:
 2. Fill in the contact line: `[Your name] · [contact email] · [phone]`.
 3. Replace `ABN [placeholder]` in the footer.
 
-## Adding real screenshots
+## Screenshots
 
-The hero and Trends sections currently use built-in CSS mock-ups so the site
-works with zero assets. To swap in real app screenshots:
+The hero and Trends sections use REAL screenshots of the Windows app, in the
+`screenshots/` folder:
 
-1. Create a `screenshots/` folder in the repo and upload your PNGs.
-2. In `index.html`, follow the HTML comments marked
-   "To use a real screenshot" — each shows the exact one-line replacement.
+- `screenshots/overview.png` — the colour-coded results view (hero)
+- `screenshots/trends.png` — the Trends view (showcase)
+
+To update them, replace those two PNG files (keep the same names). They're
+captured with the app licensed to a demo school and only fake student names, so
+they're safe to publish. Keep them under ~500 KB each for fast loading.
 
 ## Editing text
 
