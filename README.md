@@ -20,23 +20,26 @@ what appears on the page.
 
 Every future commit to the repo republishes the site automatically.
 
-## Before launch — three TODOs
+## Before launch — one TODO
 
-Search `index.html` for `TODO`:
+Contact email is `admin@vcdatatracker.com.au` throughout (contact section + FAQ).
 
-1. Replace `hello@example.com` (appears twice) with your real contact email.
-2. Fill in the contact line: `[Your name] · [contact email] · [phone]`.
-3. Replace `ABN [placeholder]` in the footer.
+1. Replace `ABN [placeholder]` in the footer.
 
 ## Screenshots
 
-The hero and Trends sections use REAL screenshots of the Windows app, in the
-`screenshots/` folder:
+The hero and the click-through Tour section use REAL screenshots of the
+Windows app, in the `screenshots/` folder:
 
 - `screenshots/overview.png` — the colour-coded results view (hero)
-- `screenshots/trends.png` — the Trends view (showcase)
+- `screenshots/trends.png` — Trends (tour slide 1)
+- `screenshots/insights.png` — Insights quadrant (tour slide 2)
+- `screenshots/statistics.png` — Statistics dashboard (tour slide 3)
+- `screenshots/profile.png` — student profile (tour slide 4)
+- `screenshots/all-semesters.png` — All semesters view (tour slide 5)
+- `screenshots/below-level.png` — Below level watchlist (tour slide 6)
 
-To update them, replace those two PNG files (keep the same names). They're
+To update them, replace the PNG files (keep the same names). They're
 captured with the app licensed to a demo school and only fake student names, so
 they're safe to publish. Keep them under ~500 KB each for fast loading.
 
