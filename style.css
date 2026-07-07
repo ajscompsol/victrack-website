@@ -288,7 +288,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .price { font-family: var(--font-display); color: var(--muted); margin-bottom: 4px; }
 .price span { font-size: 2.6rem; font-weight: 700; color: var(--ink); }
 .price-sub { color: var(--muted); }
+.price-early {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding: .45rem .9rem;
+  background: #fdf4e3;
+  border: 1px solid #e8a33d;
+  border-radius: 999px;
+  font-size: .95rem;
+  color: #6b4a0b;
+}
+.price-addon {
+  margin-top: .55rem;
+  padding-top: .55rem;
+  border-top: 1px dashed var(--line);
+  font-size: .9rem;
+  color: var(--muted);
+}
+.price-addon strong { color: var(--teal-dark); }
 .price-note { font-size: .93rem; color: var(--muted); max-width: 62rem; }
+
+/* Attendance add-on section footnote. */
+.attendance-note { margin-top: .9rem; font-size: .93rem; color: var(--muted); }
 
 /* ---------- FAQ ---------- */
 details {
