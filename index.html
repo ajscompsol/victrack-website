@@ -299,34 +299,50 @@
     <p class="eyebrow">Optional add-on</p>
     <h2 class="section-title">The Attendance module — the other half of every conversation</h2>
     <div class="showcase-grid">
-      <figure class="shot" aria-label="Attendance analytics with rates, risk bands and attendance versus achievement">
-        <img src="screenshots/attendance.png" alt="VC Data Tracker Attendance module: rates, risk bands, and attendance plotted against achievement" loading="lazy">
-        <figcaption>Attendance × achievement — the students who are behind AND away stand out.</figcaption>
-      </figure>
+      <div class="att-carousel">
+        <div class="att-frame">
+          <button type="button" class="att-nav att-prev" aria-label="Previous screenshot">&lsaquo;</button>
+          <button type="button" class="att-nav att-next" aria-label="Next screenshot">&rsaquo;</button>
+          <figure class="att-slide active" data-caption="Attendance × achievement — the students who are behind AND away stand out.">
+            <img src="screenshots/attendance.png" alt="VC Data Tracker Attendance module: rates, risk bands, and attendance plotted against achievement" loading="lazy">
+          </figure>
+          <figure class="att-slide" data-caption="Every student — sort and filter any way you need; here, one field jumps to everyone below 90%.">
+            <img src="screenshots/attendance-table.png" alt="VC Data Tracker attendance table: every student with rate, approved and unexplained days, top absence code — filtered to below 90%" loading="lazy">
+          </figure>
+          <figure class="att-slide" data-caption="On the profile, beside their results: rate, absence codes explained, and the term / month / weekday pattern.">
+            <img src="screenshots/attendance-profile.png" alt="VC Data Tracker student profile attendance block: rate, absence codes by name, and the term, month and weekday pattern" loading="lazy">
+          </figure>
+        </div>
+        <p class="att-caption">Attendance × achievement — the students who are behind AND away stand out.</p>
+        <div class="att-dots" role="tablist" aria-label="Choose an attendance screenshot">
+          <button type="button" class="att-dot active" aria-label="Attendance and achievement"></button>
+          <button type="button" class="att-dot" aria-label="Every-student attendance table"></button>
+          <button type="button" class="att-dot" aria-label="Student attendance profile"></button>
+        </div>
+        <p class="att-hint">Use the arrows to rotate — click the image to enlarge</p>
+      </div>
       <div class="showcase-copy">
         <ul class="tick-list">
           <li>Imports the standard <strong>CASES21 half-day export</strong> in one click — re-import in seconds whenever you re-export; it's always the year to date</li>
           <li>Rates and risk bands for every student: at/above 90%, the 80–90% at-risk band, chronic absence below 80%, and the unexplained/truancy share</li>
           <li><strong>Attendance × achievement</strong>: matched to results automatically by student code, so the students who are behind <em>and</em> away surface immediately</li>
-          <li>Patterns by month, weekday and year level; absence codes explained by name</li>
-          <li>Woven through the whole app: attendance columns on the tables, pills on hover cards, blocks on profiles, flags on Students to Watch, a section in the whole-school report</li>
+          <li>The <strong>Every-student table</strong> filters any way you need — including a “below N%” field to pull up everyone under a threshold in one move</li>
+          <li>On each <strong>profile</strong>: the rate, absence codes explained by name, and the term / month / weekday pattern, beside their results</li>
+          <li>Woven through the whole app: attendance columns on the tables, pills on hover cards, flags on Students to Watch, a section in the whole-school report</li>
         </ul>
         <p class="attendance-note">Everything results-related works without it — add the module when attendance should join the picture. <a href="#pricing">See pricing</a>.</p>
       </div>
     </div>
-
-    <div class="att-gallery">
-      <figure class="shot" aria-label="The Every-student attendance table, filtered to students below 90%">
-        <img src="screenshots/attendance-table.png" alt="VC Data Tracker attendance table: every student with rate, approved and unexplained days, top absence code — filtered to below 90%" loading="lazy">
-        <figcaption>Every student — sort and filter any way you need. Here, one field jumps straight to everyone below 90%.</figcaption>
-      </figure>
-      <figure class="shot" aria-label="A single student's attendance on their profile">
-        <img src="screenshots/attendance-profile.png" alt="VC Data Tracker student profile attendance block: rate, absence codes by name, and the term, month and weekday pattern" loading="lazy">
-        <figcaption>On the profile, beside their results: rate, absence codes explained, and the term / month / weekday pattern.</figcaption>
-      </figure>
-    </div>
   </div>
 </section>
+
+<!-- Lightbox for enlarging the attendance screenshots -->
+<div class="lightbox" id="attLightbox" aria-hidden="true" role="dialog" aria-label="Enlarged screenshot">
+  <button type="button" class="lb-close" aria-label="Close">&times;</button>
+  <button type="button" class="lb-nav lb-prev" aria-label="Previous">&lsaquo;</button>
+  <img class="lb-img" src="" alt="">
+  <button type="button" class="lb-nav lb-next" aria-label="Next">&rsaquo;</button>
+</div>
 
 <!-- ============ PRIVACY ============ -->
 <section id="privacy" class="section section-dark">
@@ -439,8 +455,8 @@
     <i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i><i class="s6"></i><i class="s7"></i>
   </div>
   <div class="container">
-    <p>Compass is a product of Compass Education; VC&nbsp;Tracker is not affiliated with Compass Education — it imports report export files schools generate themselves.</p>
-    <p>Victorian Curriculum F–10 is published by the VCAA. VC&nbsp;Tracker is an independent analysis tool and is not affiliated with or endorsed by the VCAA or the Department of Education.</p>
+    <p>Compass is a product of Compass Education; VC&nbsp;Data Tracker is not affiliated with Compass Education — it imports report export files schools generate themselves.</p>
+    <p>Victorian Curriculum F–10 is published by the VCAA. VC&nbsp;Data Tracker is an independent analysis tool and is not affiliated with or endorsed by the VCAA or the Department of Education.</p>
     <p>Prices in AUD. ABN [placeholder]. © 2026 Victorian Curriculum Data Tracker.</p>
   </div>
 </footer>
@@ -462,6 +478,45 @@
   tabs.forEach(function (t, i) { t.addEventListener("click", function () { show(i); }); });
   document.querySelector(".tour-prev").addEventListener("click", function () { show(current - 1); });
   document.querySelector(".tour-next").addEventListener("click", function () { show(current + 1); });
+})();
+
+// Attendance screenshots: a click-to-rotate carousel in one spot, with a
+// click-to-enlarge lightbox. No dependencies; the first slide shows without JS.
+(function () {
+  var carousel = document.querySelector(".att-carousel");
+  var lb = document.getElementById("attLightbox");
+  if (!carousel || !lb) return;
+  var slides = Array.prototype.slice.call(carousel.querySelectorAll(".att-slide"));
+  var dots = Array.prototype.slice.call(carousel.querySelectorAll(".att-dot"));
+  var caption = carousel.querySelector(".att-caption");
+  var imgs = slides.map(function (s) { return s.querySelector("img").getAttribute("src"); });
+  var lbImg = lb.querySelector(".lb-img");
+  var current = 0;
+
+  function show(i) {
+    current = (i + slides.length) % slides.length;
+    slides.forEach(function (s, j) { s.classList.toggle("active", j === current); });
+    dots.forEach(function (d, j) { d.classList.toggle("active", j === current); });
+    if (caption) caption.textContent = slides[current].getAttribute("data-caption") || "";
+    if (lb.classList.contains("open")) lbImg.setAttribute("src", imgs[current]);
+  }
+  carousel.querySelector(".att-prev").addEventListener("click", function () { show(current - 1); });
+  carousel.querySelector(".att-next").addEventListener("click", function () { show(current + 1); });
+  dots.forEach(function (d, i) { d.addEventListener("click", function () { show(i); }); });
+
+  function openLb() { lbImg.setAttribute("src", imgs[current]); lb.classList.add("open"); lb.setAttribute("aria-hidden", "false"); }
+  function closeLb() { lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); }
+  slides.forEach(function (s, i) { s.querySelector("img").addEventListener("click", function () { show(i); openLb(); }); });
+  lb.querySelector(".lb-prev").addEventListener("click", function (e) { e.stopPropagation(); show(current - 1); });
+  lb.querySelector(".lb-next").addEventListener("click", function (e) { e.stopPropagation(); show(current + 1); });
+  lb.querySelector(".lb-close").addEventListener("click", closeLb);
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLb();
+    else if (e.key === "ArrowLeft") show(current - 1);
+    else if (e.key === "ArrowRight") show(current + 1);
+  });
 })();
 </script>
 
