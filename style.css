@@ -337,14 +337,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: .95rem;
   color: #6b4a0b;
 }
-.price-addon {
-  margin-top: .55rem;
-  padding-top: .55rem;
-  border-top: 1px dashed var(--line);
-  font-size: .9rem;
-  color: var(--muted);
-}
-.price-addon strong { color: var(--teal-dark); }
 .price-note { font-size: .93rem; color: var(--muted); max-width: 62rem; }
 
 /* Attendance add-on section footnote. */

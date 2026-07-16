@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Victorian Curriculum Data Tracker — Every student's growth at a glance</title>
-<meta name="description" content="Victorian Curriculum tracking for schools. Import semester results from Compass or any reporting system, see colour-coded growth, spot trends across years of history. 100% offline — data never leaves your school.">
+<meta name="description" content="Victorian Curriculum tracking for schools. Self-hosted on your school’s own server — teachers sign in from any browser. Colour-coded growth, attendance, PAT and NAPLAN, trends across years of history. Student data never leaves the school.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -44,8 +44,8 @@
     <div class="hero-copy">
       <p class="eyebrow">For Victorian government schools · Prep–Year&nbsp;10</p>
       <h1>See every student's growth at a&nbsp;glance.</h1>
-      <p class="lead">VC Data Tracker turns the semester results export you already produce — from Compass or any reporting system — into colour-coded insight: who is below, at or above level, who has made expected growth, and how results are trending — across every subject, class and year level, over years of history. Add the optional <a href="#attendance">Attendance module</a> and the CASES21 attendance picture joins in, matched to achievement student by student.</p>
-      <p class="lead-strong">100% offline. Student data never leaves the school.</p>
+      <p class="lead">VC Data Tracker turns the semester results export you already produce — from Compass or any reporting system — into colour-coded insight: who is below, at or above level, who has made expected growth, and how results are trending — across every subject, class and year level, over years of history. <a href="#attendance">Attendance</a>, PAT and NAPLAN join in too — all matched to achievement student by student.</p>
+      <p class="lead-strong">Self-hosted at your school — teachers sign in from any browser. Student data never leaves the building.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#contact">Get in touch</a>
         <a class="btn btn-ghost" href="#pricing">See pricing</a>
@@ -79,7 +79,7 @@
       <article class="feature">
         <span class="feature-mark mk-teal" aria-hidden="true"></span>
         <h3>Any reporting system, one click</h3>
-        <p>Imports the standard Compass semester export (CSV) directly, or a simple fill-in template for schools on other systems — no re-typing, no spreadsheet surgery. Import one semester or a whole folder of years in one go. Re-importing safely replaces a semester and shows exactly what changed — and a data-health check flags whole-class entry errors and improbable jumps automatically.</p>
+        <p>Imports the standard Compass semester export (CSV) directly, or a simple fill-in template for schools on other systems — no re-typing, no spreadsheet surgery. Import one semester or a whole folder of years in one go. Re-importing safely replaces a semester and shows exactly what changed, a data-health check flags whole-class entry errors and improbable jumps automatically — and attendance, PAT and NAPLAN files get a pre-import match preview showing exactly who matched before anything lands.</p>
       </article>
       <article class="feature">
         <span class="feature-mark mk-green" aria-hidden="true"></span>
@@ -89,7 +89,7 @@
       <article class="feature">
         <span class="feature-mark mk-blue" aria-hidden="true"></span>
         <h3>Every student's story</h3>
-        <p>Click any name for their full history: every subject and semester, colour-coded, with summary statistics — and attendance alongside, with the module. Hover any name for an instant summary card; Ctrl+K finds anyone. Exportable as a polished PDF for meetings with families or support staff.</p>
+        <p>Click any name for their full history: every subject and semester, colour-coded, with summary statistics — attendance, PAT and NAPLAN alongside. Hover any name for an instant summary card; Ctrl+K finds anyone. Exportable as a polished PDF for meetings with families or support staff.</p>
       </article>
       <article class="feature">
         <span class="feature-mark mk-red" aria-hidden="true"></span>
@@ -104,7 +104,7 @@
       <article class="feature">
         <span class="feature-mark mk-pink" aria-hidden="true"></span>
         <h3>Private, secure — and forgiving</h3>
-        <p>Runs entirely on school computers: no cloud, no accounts, no internet required. Encrypted at rest, with password-protected AES-256 portable backups. Automatic snapshots before anything destructive, one-click Undo on deletes, and a merge tool that re-joins a student's history if their code ever changes — student data never leaves the school, and mistakes are reversible.</p>
+        <p>Runs on one computer at your school — no cloud, no third-party hosting, no internet required. Per-teacher sign-ins with roles (imports and deletes stay admin-only), data encrypted at rest, password-protected AES-256 portable backups. Automatic snapshots before anything destructive, one-click Undo on imports and deletes, and a merge tool that re-joins a student's history if their code ever changes.</p>
       </article>
     </div>
   </div>
@@ -121,10 +121,13 @@
       <button type="button" class="tour-tab" data-slide="1">Data wall</button>
       <button type="button" class="tour-tab" data-slide="2">Trends</button>
       <button type="button" class="tour-tab" data-slide="3">Insights</button>
-      <button type="button" class="tour-tab" data-slide="4">Statistics</button>
-      <button type="button" class="tour-tab" data-slide="5">Student profiles</button>
-      <button type="button" class="tour-tab" data-slide="6">All semesters</button>
-      <button type="button" class="tour-tab" data-slide="7">Watchlists</button>
+      <button type="button" class="tour-tab" data-slide="4">PAT</button>
+      <button type="button" class="tour-tab" data-slide="5">NAPLAN</button>
+      <button type="button" class="tour-tab" data-slide="6">Statistics</button>
+      <button type="button" class="tour-tab" data-slide="7">Student profiles</button>
+      <button type="button" class="tour-tab" data-slide="8">All semesters</button>
+      <button type="button" class="tour-tab" data-slide="9">Watchlists</button>
+      <button type="button" class="tour-tab" data-slide="10">Safe imports</button>
     </div>
 
     <!-- All slides use REAL screenshots of the Windows app (sample data only). -->
@@ -140,7 +143,7 @@
           <ul class="tick-list">
             <li>A written digest computed from your data: how results compare, which year level moved most, who needs watching</li>
             <li>Headline tiles that jump straight to the matching view — below level, above level, students to watch</li>
-            <li>Attendance at a glance (with the module), target progress, and the whole-school trend across every semester ever imported</li>
+            <li>Attendance, PAT and NAPLAN at a glance, target progress, and the whole-school trend across every semester ever imported</li>
             <li>It's the landing page — the numbers greet you before you've clicked anything</li>
           </ul>
         </div>
@@ -195,6 +198,38 @@
       </div>
 
       <div class="tour-slide showcase-grid">
+        <figure class="shot" aria-label="PAT view: scale-score box plots by year level against entered reference medians">
+          <img src="screenshots/pat.png" alt="VC Data Tracker PAT view: scale scores by year level as box plots with reference medians, growth between sittings" loading="lazy">
+          <figcaption>PAT the way ACER intends — scale scores, never raw marks.</figcaption>
+        </figure>
+        <div class="showcase-copy">
+          <h3 class="tour-heading">PAT results, matched to everything else</h3>
+          <ul class="tick-list">
+            <li>Imports <strong>ACER's exports</strong> as-is — the per-test Group Report or the Data Explorer file, detected automatically; each export merges in, so history accumulates. Adaptive and conventional sittings share ACER's scale, so growth follows students across the switch — with a Version switcher to view them separately</li>
+            <li>Scale-score <strong>box plots by year level</strong> with your entered reference medians marked (labelled with the norm set you used), band distributions across sittings, and each student's growth against the expected gain</li>
+            <li>A growth-vs-achievement quadrant — and every PAT score joins the student's profile, hover card and PDF</li>
+            <li>Switch between sittings, filter by year level, class or group — same controls as every other view</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tour-slide showcase-grid">
+        <figure class="shot" aria-label="NAPLAN view: proficiency levels by domain and Year 3 to Year 5 growth">
+          <img src="screenshots/naplan.png" alt="VC Data Tracker NAPLAN view: proficiency levels by domain, scaled-score box plots and Year 3 to Year 5 growth" loading="lazy">
+          <figcaption>Proficiency levels by domain — and real Year 3 → Year 5 growth per student.</figcaption>
+        </figure>
+        <div class="showcase-copy">
+          <h3 class="tour-heading">NAPLAN beside the classroom picture</h3>
+          <ul class="tick-list">
+            <li>Imports your school's <strong>CASES21/APS results CSV</strong> (or an SSSR-style file) — proficiency levels and scaled scores</li>
+            <li>Levels by domain, scaled-score spreads, and once two test years are in: <strong>each student's Year 3 → Year 5 change</strong></li>
+            <li>A crossover view against teacher judgement — see where NAPLAN and classroom results agree and where they don't</li>
+            <li>Flows through profiles, the Overview, hover cards and the whole-school report like everything else</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tour-slide showcase-grid">
         <figure class="shot" aria-label="Statistics dashboard with achievement and growth breakdowns">
           <img src="screenshots/statistics.png" alt="VC Data Tracker Statistics dashboard: achievement and growth by year level, subject or home group" loading="lazy">
           <figcaption>Whole-school numbers at a glance — bars and pies side by side.</figcaption>
@@ -216,12 +251,12 @@
           <figcaption>One student, whole story — every subject, every semester.</figcaption>
         </figure>
         <div class="showcase-copy">
-          <h3 class="tour-heading">Every student's story on one page</h3>
+          <h3 class="tour-heading">Every student's story in one place</h3>
           <ul class="tick-list">
-            <li>Full longitudinal history: every subject and semester, colour-coded — plus their attendance, with the module</li>
+            <li>Full longitudinal history: every subject and semester, colour-coded — plus their attendance, PAT and NAPLAN results</li>
             <li>Growth vs expected for every result — the six-months-per-semester expectation scales automatically</li>
             <li><strong>Ctrl+K</strong> jumps to any student from anywhere in the app — or hover a name anywhere for an instant summary card</li>
-            <li>Export as a polished one-page PDF — or batch-export the whole school, one PDF per student, before parent–teacher interviews</li>
+            <li>Export as a polished PDF — or batch-export the whole school, one PDF per student, before parent–teacher interviews</li>
           </ul>
         </div>
       </div>
@@ -258,11 +293,27 @@
         </div>
       </div>
 
+      <div class="tour-slide showcase-grid">
+        <figure class="shot" aria-label="The pre-import match preview showing matched and unmatched students">
+          <img src="screenshots/import-preview.png" alt="VC Data Tracker import match preview: students in file, matched to results, and the unmatched list — before anything imports" loading="lazy">
+          <figcaption>Who matched, who didn't — before anything imports.</figcaption>
+        </figure>
+        <div class="showcase-copy">
+          <h3 class="tour-heading">Imports you can trust</h3>
+          <ul class="tick-list">
+            <li>Attendance, PAT and NAPLAN files show a <strong>match preview first</strong>: how many students matched your results data, and exactly who didn't — proceed or cancel</li>
+            <li>Unmatched students still import, marked clearly — and <strong>link up automatically</strong> the moment a semester import carries the same student code</li>
+            <li>Re-importing a semester shows a <strong>“what changed” report</strong>: every result that changed value, was → now</li>
+            <li>Automatic snapshots before every import, one-click Undo right on the confirmation</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
     <div class="tour-nav">
       <button type="button" class="btn btn-ghost btn-small tour-prev" aria-label="Previous view">‹ Previous</button>
-      <span class="tour-count" aria-hidden="true">1 / 8</span>
+      <span class="tour-count" aria-hidden="true">1 / 11</span>
       <button type="button" class="btn btn-ghost btn-small tour-next" aria-label="Next view">Next ›</button>
     </div>
   </div>
@@ -293,18 +344,43 @@
   </div>
 </section>
 
-<!-- ============ ATTENDANCE MODULE ============ -->
+
+<!-- ============ WEB EDITION ============ -->
+<section id="webedition" class="section">
+  <div class="container">
+    <p class="eyebrow">Runs at your school</p>
+    <h2 class="section-title">One install. Every teacher, every browser.</h2>
+    <div class="showcase-grid">
+      <figure class="shot" aria-label="Teacher sign-ins managed in Settings">
+        <img src="screenshots/users.png" alt="VC Data Tracker user management: teacher sign-ins with names, roles, last sign-in and bulk CSV import" loading="lazy">
+        <figcaption>Accounts are managed in the app — add teachers one by one or import the whole staff list from a CSV.</figcaption>
+      </figure>
+      <div class="showcase-copy">
+        <ul class="tick-list">
+          <li>Installs on <strong>one Windows computer at school</strong> — a server or any always-on PC. Nothing to install anywhere else</li>
+          <li>Teachers open it <strong>in their browser</strong> on the school network and sign in with their school email address</li>
+          <li><strong>Roles that match how schools work</strong>: teachers analyse and export; imports, deletions, restores and licence changes stay admin-only</li>
+          <li>Self-service password reset with admin-issued codes — emailed automatically when the school mail server is configured</li>
+          <li>Each sign-in keeps its own preferences: last view, filters, colour palette, text size</li>
+          <li>HTTPS supported out of the box; data encrypted at rest on the school's own machine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATTENDANCE ============ -->
 <section id="attendance" class="section section-tint">
   <div class="container">
-    <p class="eyebrow">Optional add-on</p>
-    <h2 class="section-title">The Attendance module — the other half of every conversation</h2>
+    <p class="eyebrow">Included</p>
+    <h2 class="section-title">Attendance — the other half of every conversation</h2>
     <div class="showcase-grid">
       <div class="att-carousel">
         <div class="att-frame">
           <button type="button" class="att-nav att-prev" aria-label="Previous screenshot">&lsaquo;</button>
           <button type="button" class="att-nav att-next" aria-label="Next screenshot">&rsaquo;</button>
           <figure class="att-slide active" data-caption="Attendance × achievement — the students who are behind AND away stand out.">
-            <img src="screenshots/attendance.png" alt="VC Data Tracker Attendance module: rates, risk bands, and attendance plotted against achievement" loading="lazy">
+            <img src="screenshots/attendance.png" alt="VC Data Tracker attendance analytics: rates, risk bands, and attendance plotted against achievement" loading="lazy">
           </figure>
           <figure class="att-slide" data-caption="Every student — sort and filter any way you need; here, one field jumps to everyone below 90%.">
             <img src="screenshots/attendance-table.png" alt="VC Data Tracker attendance table: every student with rate, approved and unexplained days, top absence code — filtered to below 90%" loading="lazy">
@@ -326,11 +402,11 @@
           <li>Imports the standard <strong>CASES21 half-day export</strong> in one click — re-import in seconds whenever you re-export; it's always the year to date</li>
           <li>Rates and risk bands for every student: at/above 90%, the 80–90% at-risk band, chronic absence below 80%, and the unexplained/truancy share</li>
           <li><strong>Attendance × achievement</strong>: matched to results automatically by student code, so the students who are behind <em>and</em> away surface immediately</li>
-          <li>The <strong>Every-student table</strong> filters any way you need — including a “below N%” field to pull up everyone under a threshold in one move</li>
+          <li>The <strong>Every-student table</strong> filters any way you need — a threshold field pulls up everyone below (or, flipped, above) any rate in one move, and the term filter re-tallies everything, absence codes included, for just that term</li>
           <li>On each <strong>profile</strong>: the rate, absence codes explained by name, and the term / month / weekday pattern, beside their results</li>
           <li>Woven through the whole app: attendance columns on the tables, pills on hover cards, flags on Students to Watch, a section in the whole-school report</li>
         </ul>
-        <p class="attendance-note">Everything results-related works without it — add the module when attendance should join the picture. <a href="#pricing">See pricing</a>.</p>
+        <p class="attendance-note">Included with every licence — attendance joins the picture the day you import it. <a href="#pricing">See pricing</a>.</p>
       </div>
     </div>
   </div>
@@ -350,14 +426,15 @@
     <div>
       <p class="eyebrow eyebrow-light">Privacy &amp; security</p>
       <h2 class="section-title">Your student data stays at school. Full stop.</h2>
-      <p>VC Data Tracker is a Windows desktop app — not a website, not a cloud service. There are no accounts, no sync and no telemetry. Nothing is sent anywhere, and the app doesn't need the internet at all.</p>
+      <p>VC Data Tracker runs on your school's own computer — not our cloud, not anyone's cloud. Teachers sign in over the school network; nothing is sent outside the school, there's no telemetry, and the internet isn't required at all.</p>
     </div>
     <ul class="tick-list tick-light">
-      <li><strong>100% offline</strong> — no cloud, no accounts, no internet required</li>
-      <li><strong>Encrypted at rest</strong>, tied to the Windows sign-in</li>
+      <li><strong>Self-hosted</strong> — lives on a school computer; no cloud, no third parties</li>
+      <li><strong>Per-teacher sign-ins</strong> — hashed passwords, role-based permissions, admin-only imports</li>
+      <li><strong>Encrypted at rest</strong> on the school’s machine; HTTPS supported</li>
       <li><strong>Password-protected AES-256</strong> portable backups</li>
       <li><strong>Atomic saves</strong> with rolling backup — your history is safe</li>
-      <li><strong>Built for school IT</strong> — standard installer plus MSI for managed deployment, per-user install, offline activation; yearly versions install over the top and keep your data</li>
+      <li><strong>Built for school IT</strong> — a single professional installer on one machine, runs automatically at boot, offline activation; new versions install over the top and keep your data</li>
     </ul>
   </div>
 </section>
@@ -373,22 +450,19 @@
         <h3>Small</h3>
         <p class="price"><span>$250</span>/yr</p>
         <p class="price-sub">Up to 200 students</p>
-        <p class="price-addon">With Attendance module: <strong>$350</strong>/yr</p>
       </div>
       <div class="price-card price-featured">
         <h3>Medium</h3>
         <p class="price"><span>$550</span>/yr</p>
         <p class="price-sub">Up to 500 students</p>
-        <p class="price-addon">With Attendance module: <strong>$700</strong>/yr</p>
       </div>
       <div class="price-card">
         <h3>Large</h3>
         <p class="price"><span>$850</span>/yr</p>
         <p class="price-sub">Up to 1,000 students</p>
-        <p class="price-addon">With Attendance module: <strong>$1,050</strong>/yr</p>
       </div>
     </div>
-    <p class="price-note">Core covers everything results-related; the <a href="#attendance">Attendance module</a> adds the CASES21 attendance analytics and the attendance columns, flags and report sections throughout the app — and can be added mid-year. Larger or multi-campus schools: <a href="#contact">contact us</a> for custom pricing. All tiers include the site licence (all staff, all school computers), every update for the licensed year, and email support. Previously imported years remain accessible forever — an expired licence simply makes the app read-only until renewed. Licences run per school year with a grace period to late January. School size is based on a single semester's enrolment, not history. Prices in AUD.</p>
+    <p class="price-note">Every licence includes everything — results analysis, <a href="#attendance">attendance</a>, PAT and NAPLAN. Larger or multi-campus schools: <a href="#contact">contact us</a> for custom pricing. All tiers include the site licence (all staff, all school computers), every update for the licensed year, and email support. Previously imported years remain accessible forever — an expired licence simply makes the app read-only until renewed. Licences run per school year with a grace period to late January. School size is based on a single semester's enrolment, not history. Prices in AUD.</p>
   </div>
 </section>
 
@@ -399,15 +473,11 @@
     <h2 class="section-title">Common questions</h2>
     <details>
       <summary>Where does our student data go?</summary>
-      <p>Nowhere. It's a desktop app — no cloud, no accounts, no internet required. Data is encrypted on the computer it lives on.</p>
+      <p>Nowhere. It runs on a computer at your school and teachers use it through their browsers on the school network — no cloud, no third-party hosting, no internet required. Data is encrypted on the machine it lives on.</p>
     </details>
     <details>
       <summary>What data does it need?</summary>
-      <p>The standard Compass semester report export (CSV), or a simple fill-in CSV template for schools on other reporting systems. One click to import — single semesters or a whole folder at once. The Attendance module reads the standard CASES21 half-day attendance export.</p>
-    </details>
-    <details>
-      <summary>Do we need the Attendance module?</summary>
-      <p>No — everything results-related works without it. The module adds the CASES21 attendance analytics and the attendance columns, flags and report sections throughout the app. It can be added when you licence, or mid-year.</p>
+      <p>The standard Compass semester report export (CSV), or a simple fill-in CSV template for schools on other reporting systems. One click to import — single semesters or a whole folder at once. Attendance reads the standard CASES21 half-day export; PAT reads ACER's exports (the per-test Group Report or the Data Explorer file); NAPLAN reads your school's CASES21/APS results CSV or an SSSR-style file. Attendance, PAT and NAPLAN imports show a match preview — who matched, who didn't — before anything lands.</p>
     </details>
     <details>
       <summary>Does it work for secondary schools?</summary>
@@ -419,11 +489,11 @@
     </details>
     <details>
       <summary>What if we get a new computer?</summary>
-      <p>The site licence covers every school computer, and password-protected backups move your data across.</p>
+      <p>Teachers’ computers don’t matter — everything lives on the one school machine it’s installed on. Moving that machine is a reinstall plus a password-protected backup restore.</p>
     </details>
     <details>
       <summary>How is it installed?</summary>
-      <p>A standard Windows installer, or an MSI for school-wide managed deployment by your technician. Windows 10/11 (64-bit); macOS on request.</p>
+      <p>One professional Windows installer on a single school computer — a server or any always-on PC (Windows 10/11 or Windows Server, 64-bit). It starts automatically with the machine; teachers just need a browser and the address, nothing installed on their computers.</p>
     </details>
     <details>
       <summary>Can we try it first?</summary>
