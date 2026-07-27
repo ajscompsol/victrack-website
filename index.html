@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Victorian Curriculum Data Tracker — Every student's growth at a glance</title>
-<meta name="description" content="Victorian Curriculum tracking for schools. Self-hosted on your school’s own server — teachers sign in from any browser. Colour-coded growth, attendance, PAT and NAPLAN, trends across years of history. Student data never leaves the school.">
+<meta name="description" content="Victorian Curriculum tracking for schools. Self-hosted on your school’s own server — teachers sign in from any browser. Colour-coded growth, attendance, PAT, NAPLAN and Essential Assessment, trends across years of history. Student data never leaves the school.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
       <a href="#features">Features</a>
       <a href="#tour">Tour</a>
       <a href="#attendance">Attendance</a>
+      <a href="#inclusion">Inclusion</a>
       <a href="#privacy">Privacy</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
@@ -44,7 +45,7 @@
     <div class="hero-copy">
       <p class="eyebrow">For Victorian government schools · Prep–Year&nbsp;10</p>
       <h1>See every student's growth at a&nbsp;glance.</h1>
-      <p class="lead">VC Data Tracker turns the semester results export you already produce — from Compass or any reporting system — into colour-coded insight: who is below, at or above level, who has made expected growth, and how results are trending — across every subject, class and year level, over years of history. <a href="#attendance">Attendance</a>, PAT and NAPLAN join in too — all matched to achievement student by student.</p>
+      <p class="lead">VC Data Tracker turns the semester results export you already produce — from Compass or any reporting system — into colour-coded insight: who is below, at or above level, who has made expected growth, and how results are trending — across every subject, class and year level, over years of history. <a href="#attendance">Attendance</a>, PAT, NAPLAN and Essential Assessment join in too, matched to achievement student by student — and a <a href="#inclusion">Disability Inclusion module</a> keeps the register, adjustments, evidence and SSG records audit-ready all year.</p>
       <p class="lead-strong">Self-hosted at your school — teachers sign in from any browser. Student data never leaves the building.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#contact">Get in touch</a>
@@ -79,7 +80,7 @@
       <article class="feature">
         <span class="feature-mark mk-teal" aria-hidden="true"></span>
         <h3>Any reporting system, one click</h3>
-        <p>Imports the standard Compass semester export (CSV) directly, or a simple fill-in template for schools on other systems — no re-typing, no spreadsheet surgery. Import one semester or a whole folder of years in one go. Re-importing safely replaces a semester and shows exactly what changed, a data-health check flags whole-class entry errors and improbable jumps automatically — and attendance, PAT and NAPLAN files get a pre-import match preview showing exactly who matched before anything lands.</p>
+        <p>Imports the eduHub/CASES21 student list, then the standard Compass semester export (CSV), the CASES21 results XML (several semesters in one go — each file names its own), or a simple fill-in template for schools on other systems — no re-typing, no spreadsheet surgery. Re-importing safely replaces a semester and shows exactly what changed, a data-health check flags whole-class entry errors and improbable jumps automatically — and attendance, PAT, NAPLAN and Essential Assessment files get a pre-import match preview showing exactly who matched your student list before anything lands.</p>
       </article>
       <article class="feature">
         <span class="feature-mark mk-green" aria-hidden="true"></span>
@@ -89,7 +90,7 @@
       <article class="feature">
         <span class="feature-mark mk-blue" aria-hidden="true"></span>
         <h3>Every student's story</h3>
-        <p>Click any name for their full history: every subject and semester, colour-coded, with summary statistics — attendance, PAT and NAPLAN alongside. Hover any name for an instant summary card; Ctrl+K finds anyone. Exportable as a polished PDF for meetings with families or support staff.</p>
+        <p>Click any name for their full history: every subject and semester, colour-coded, with summary statistics — attendance, PAT, NAPLAN and Essential Assessment alongside. Hover any name for an instant summary card; Ctrl+K finds anyone. Exportable as a polished PDF for meetings with families or support staff.</p>
       </article>
       <article class="feature">
         <span class="feature-mark mk-red" aria-hidden="true"></span>
@@ -104,7 +105,7 @@
       <article class="feature">
         <span class="feature-mark mk-pink" aria-hidden="true"></span>
         <h3>Private, secure — and forgiving</h3>
-        <p>Runs on one computer at your school — no cloud, no third-party hosting, no internet required. Per-teacher sign-ins with roles (imports and deletes stay admin-only), data encrypted at rest, password-protected AES-256 portable backups. Automatic snapshots before anything destructive, one-click Undo on imports and deletes, and a merge tool that re-joins a student's history if their code ever changes.</p>
+        <p>Runs on one computer at your school — no cloud, no third-party hosting, no internet required. Per-teacher sign-ins with roles (imports and deletes stay admin-only), data encrypted at rest, an optional idle sign-out for shared machines, and password-protected AES-256 backups — evidence files included — that can also write themselves daily to a folder or network share. Automatic snapshots before anything destructive, one-click Undo on imports and deletes, and a merge tool that re-joins a student's history if their code ever changes.</p>
       </article>
     </div>
   </div>
@@ -143,7 +144,7 @@
           <ul class="tick-list">
             <li>A written digest computed from your data: how results compare, which year level moved most, who needs watching</li>
             <li>Headline tiles that jump straight to the matching view — below level, above level, students to watch</li>
-            <li>Attendance, PAT and NAPLAN at a glance, target progress, and the whole-school trend across every semester ever imported</li>
+            <li>Attendance, PAT, NAPLAN and Essential Assessment at a glance, target progress, and the whole-school trend across every semester ever imported</li>
             <li>It's the landing page — the numbers greet you before you've clicked anything</li>
           </ul>
         </div>
@@ -253,7 +254,7 @@
         <div class="showcase-copy">
           <h3 class="tour-heading">Every student's story in one place</h3>
           <ul class="tick-list">
-            <li>Full longitudinal history: every subject and semester, colour-coded — plus their attendance, PAT and NAPLAN results</li>
+            <li>Full longitudinal history: every subject and semester, colour-coded — plus their attendance, PAT, NAPLAN and Essential Assessment results</li>
             <li>Growth vs expected for every result — the six-months-per-semester expectation scales automatically</li>
             <li><strong>Ctrl+K</strong> jumps to any student from anywhere in the app — or hover a name anywhere for an instant summary card</li>
             <li>Export as a polished PDF — or batch-export the whole school, one PDF per student, before parent–teacher interviews</li>
@@ -295,14 +296,14 @@
 
       <div class="tour-slide showcase-grid">
         <figure class="shot" aria-label="The pre-import match preview showing matched and unmatched students">
-          <img src="screenshots/import-preview.png" alt="VC Data Tracker import match preview: students in file, matched to results, and the unmatched list — before anything imports" loading="lazy">
+          <img src="screenshots/import-preview.png" alt="VC Data Tracker import match preview: students in file and the unmatched list — matched against the school's student list before anything imports" loading="lazy">
           <figcaption>Who matched, who didn't — before anything imports.</figcaption>
         </figure>
         <div class="showcase-copy">
           <h3 class="tour-heading">Imports you can trust</h3>
           <ul class="tick-list">
-            <li>Attendance, PAT and NAPLAN files show a <strong>match preview first</strong>: how many students matched your results data, and exactly who didn't — proceed or cancel</li>
-            <li>Unmatched students still import, marked clearly — and <strong>link up automatically</strong> the moment a semester import carries the same student code</li>
+            <li>Attendance, PAT, NAPLAN and Essential Assessment files show a <strong>match preview first</strong>: how many students matched your student list, and exactly who didn't — proceed or cancel</li>
+            <li>Unmatched students still import, marked clearly — and <strong>link up automatically</strong> the moment they're added to your student list</li>
             <li>Re-importing a semester shows a <strong>“what changed” report</strong>: every result that changed value, was → now</li>
             <li>Automatic snapshots before every import, one-click Undo right on the confirmation</li>
           </ul>
@@ -412,6 +413,37 @@
   </div>
 </section>
 
+<!-- ============ DISABILITY INCLUSION ============ -->
+<section id="inclusion" class="section">
+  <div class="container">
+    <p class="eyebrow">Included</p>
+    <h2 class="section-title">Disability Inclusion — from term-end scramble to running system</h2>
+    <div class="showcase-grid">
+      <div>
+        <figure class="shot" aria-label="The Disability Inclusion register with its audit checklist">
+          <img src="screenshots/inclusion.png" alt="VC Data Tracker Disability Inclusion register: NCCD category and level chips, funding, consultation and SSG status, with an audit checklist of click-to-filter tiles" loading="lazy">
+          <figcaption>The register, with the audit checklist that lights up anything a validation visit would flag.</figcaption>
+        </figure>
+        <figure class="shot" aria-label="One student's inclusion page">
+          <img src="screenshots/inclusion-student.png" alt="VC Data Tracker student inclusion page: register entry, adjustment history, SSG meetings, evidence vault and learning snapshot on one page" loading="lazy">
+          <figcaption>One student, one page — entry, history, meetings, evidence and a learning snapshot.</figcaption>
+        </figure>
+      </div>
+      <div class="showcase-copy">
+        <ul class="tick-list">
+          <li>A <strong>register</strong> of the students you support: NCCD category, level of adjustment, funding (DI Tier 3, legacy PSD, out-of-home care), parent/carer consultation and Disability Inclusion Profile progress</li>
+          <li><strong>30-second adjustment logging</strong> for every teacher, from your school's own catalogue — the evidence base builds itself across the whole staff, all year</li>
+          <li>An encrypted <strong>evidence vault</strong> per student, tagged with NCCD evidence areas and flagged when it goes stale — and included in password-protected backups</li>
+          <li><strong>SSG meetings</strong> with minutes pre-filled from live results and attendance, actions that roll forward, termly cadence warnings for mandated students, and a plain-language one-pager for families</li>
+          <li>One click builds the <strong>DIP meeting pack</strong> — adjustments by domain, evidence index, every meeting's minutes and the learning picture — or the <strong>NCCD census pack</strong> with its before-the-census exceptions list</li>
+          <li><strong>Access is granted per sign-in</strong>, coordinators run it, every view and change is audited — built for the most sensitive information a school keeps</li>
+        </ul>
+        <p class="attendance-note">Included with every licence. <a href="#pricing">See pricing</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Lightbox for enlarging the attendance screenshots -->
 <div class="lightbox" id="attLightbox" aria-hidden="true" role="dialog" aria-label="Enlarged screenshot">
   <button type="button" class="lb-close" aria-label="Close">&times;</button>
@@ -466,7 +498,7 @@
         <p class="price-sub">inc GST</p>
       </div>
     </div>
-    <p class="price-note">Every licence includes everything — results analysis, <a href="#attendance">attendance</a>, PAT and NAPLAN. Multi-campus schools: <a href="#contact">contact us</a>. All tiers include the site licence (all staff, all school computers), every update for the licensed year, and email support. Previously imported years remain accessible forever — an expired licence simply makes the app read-only until renewed. Licences run per school year with a grace period to late January. School size is based on a single semester's enrolment, not history. Prices in AUD and include GST.</p>
+    <p class="price-note">Every licence includes everything — results analysis, <a href="#attendance">attendance</a>, PAT, NAPLAN, Essential Assessment and the <a href="#inclusion">Disability Inclusion module</a>. Multi-campus schools: <a href="#contact">contact us</a>. All tiers include the site licence (all staff, all school computers), every update for the licensed year, and email support. Previously imported years remain accessible forever — an expired licence simply makes the app read-only until renewed. Licences run for 12 months from the day you activate — not the calendar year. School size is based on a single semester's enrolment, not history. Prices in AUD and include GST.</p>
   </div>
 </section>
 
@@ -481,7 +513,7 @@
     </details>
     <details>
       <summary>What data does it need?</summary>
-      <p>The standard Compass semester report export (CSV), or a simple fill-in CSV template for schools on other reporting systems. One click to import — single semesters or a whole folder at once. Attendance reads the standard CASES21 half-day export; PAT reads ACER's exports (the per-test Group Report or the Data Explorer file); NAPLAN reads your school's CASES21/APS results CSV or an SSSR-style file. Attendance, PAT and NAPLAN imports show a match preview — who matched, who didn't — before anything lands.</p>
+      <p>Your eduHub/CASES21 student list first, then semester results: the standard Compass report export (CSV), the CASES21 results XML (several semesters in one go), or a simple fill-in CSV template for schools on other reporting systems. Attendance reads the standard CASES21 half-day export; PAT reads ACER's exports (the per-test Group Report or the Data Explorer file); NAPLAN reads your school's CASES21/APS results CSV or an SSSR-style file; Essential Assessment reads its whole-school results export. Every matched import shows a preview — who matched your student list, who didn't — before anything lands.</p>
     </details>
     <details>
       <summary>Does it work for secondary schools?</summary>
@@ -531,7 +563,7 @@
   <div class="container">
     <p>Compass is a product of Compass Education; VC&nbsp;Data Tracker is not affiliated with Compass Education — it imports report export files schools generate themselves.</p>
     <p>Victorian Curriculum F–10 is published by the VCAA. VC&nbsp;Data Tracker is an independent analysis tool and is not affiliated with or endorsed by the VCAA or the Department of Education.</p>
-    <p>Prices in AUD. ABN [placeholder]. © 2026 Victorian Curriculum Data Tracker.</p>
+    <p>Prices in AUD. © 2026 Victorian Curriculum Data Tracker. Need help? Contact <a href="mailto:admin@vcdatatracker.com.au">admin@vcdatatracker.com.au</a>.</p>
   </div>
 </footer>
 
